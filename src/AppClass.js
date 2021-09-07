@@ -11,16 +11,22 @@ export class AppClass extends Component {
 
 
      incrementar = () => {
-     this.setState({
-         contador: this.state.contador + 1
-     });
+     this.setState((previousState) => ({
+        // contador: this.state.contador + 1
+
+        contador: previousState.contador + 1
+
+     }));
     };
 
     decrementar = () => {
-        this.setState({
-            contador: this.state.contador - 1
-        });
-       };
+        this.setState((previousState) => ({
+            // contador: this.state.contador - 1
+    
+            contador: previousState.contador - 1
+    
+         }));
+        };
     render() {
         return (
             <div>
